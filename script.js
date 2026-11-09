@@ -418,7 +418,7 @@ const STEPS = [
     "type": "guru",
     "who": "GURU",
     "detail": "Bapak",
-    "text": "LKM ini berisi masalah yang harus kalian selesaikan. Ada enam lokasi wisata: Pantai Lovina, Air Terjun Gitgit, Pura Beji, Danau Buyan, Kota Singaraja, dan Pelabuhan Celukan Bawang, yang terhubung oleh jalur jalan. Bagaimana menggambarkan hubungan antarlokasi itu dan menelusuri jalan dari satu lokasi ke lokasi lain? Baca masalahnya dalam hati, lalu rumuskan pertanyaan yang akan kalian selidiki."
+    "text": "Masalah yang akan kalian selesaikan hari ini: bagaimana menggambarkan hubungan antarlokasi di Kabupaten Buleleng, seperti Singaraja, Lovina, Gerokgak, Seririt, Busungbiu, dan Kubutambahan, supaya mudah dipahami dan dianalisis? Rumuskan pertanyaan yang akan kalian selidiki."
    },
    {
     "type": "aksi",
@@ -434,7 +434,7 @@ const STEPS = [
     "type": "siswa",
     "who": "[KRISNA]",
     "detail": "Ketua kelas, Ketua Kel. 1",
-    "text": "Kami harus menggambarkan enam tempat wisata dan jalan penghubungnya, Pak, lalu mencari rute dari satu tempat ke tempat lain."
+    "text": "Kami harus menggambarkan hubungan antartempat di Buleleng yang dihubungkan jalan, Pak, lalu menganalisis jenis-jenis hubungannya."
    },
    {
     "type": "guru",
@@ -446,7 +446,7 @@ const STEPS = [
     "type": "siswa",
     "who": "[KRISNA]",
     "detail": "Ketua kelas, Ketua Kel. 1",
-    "text": "Apa nama bagian-bagian pada gambar itu dan berapa jumlahnya, Pak? Kami juga ingin tahu bagaimana menelusuri rute antartempat."
+    "text": "Apa nama bagian-bagian pada gambar itu dan berapa jumlahnya, Pak? Kami juga ingin tahu ada jenis apa saja hubungan antarlokasi itu."
    },
    {
     "type": "guru",
