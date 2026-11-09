@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UKIN Teaching Timer &amp; Script</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="normal" data-state="idle" data-urgency="ok">
+
+<header class="top">
+  <div class="brand">
+    <h1>UKIN TEACHING TIMER</h1>
+    <p class="meta">
+      <span>Mata Pelajaran: Informatika</span>
+      <span>Materi: Struktur Data Graph</span>
+      <span>Kelas: 9.8</span>
+      <span>Total Durasi: 80 Menit</span>
+    </p>
+  </div>
+  <div class="overall">
+    <div class="overall-text"><b id="overallPct">0%</b><span id="overallSteps">0 / 18 langkah selesai</span></div>
+    <div class="bar"><i id="overallBar"></i></div>
+  </div>
+  </header>
+
+<main class="layout">
+  <aside class="card steps">
+    <h2>Tahapan Pembelajaran</h2>
+    <ol id="stepList"></ol>
+  </aside>
+
+  <section class="card timer">
+    <div class="timer-id">
+      <div class="phase" id="phaseLabel"></div>
+      <h2 id="stepTitle"></h2>
+    </div>
+    <div class="clock" id="clock">00:00</div>
+    <div class="bar big"><i id="stepBar"></i></div>
+    <div class="prep" id="prepBanner"></div>
+    <div class="timer-meta">
+      <span>Durasi awal <b id="stepDur"></b></span>
+      <span>Sisa waktu <b id="stepLeft"></b></span>
+      <span id="nextUp"></span>
+    </div>
+  </section>
+
+  <section class="card script">
+    <div class="script-head"><h2>Naskah Pembelajaran</h2><span id="scriptRef"></span>
+      <div class="text-tools" title="Ukuran tulisan naskah (+ / -)"><button id="fontDown" aria-label="Perkecil tulisan">A−</button><span id="scaleLbl">100%</span><button id="fontUp" aria-label="Perbesar tulisan">A+</button></div>
+    </div>
+    <div class="script-body" id="scriptBody"></div>
+  </section>
+</main>
+
+<footer class="controls">
+  <div class="tools">
+    <button data-mode-btn="normal" class="on">Normal</button>
+    <button data-mode-btn="present">Presentasi</button>
+    <button data-mode-btn="timer">Fokus Timer</button>
+    <button data-mode-btn="script">Fokus Naskah</button>
+  </div>
+  <div class="playback">
+    <button id="btnPrev">SEBELUMNYA</button>
+    <button id="btnRepeat">ULANGI LANGKAH</button>
+    <button id="btnPause" class="primary">PAUSE</button>
+    <button id="btnSkip">LEWATI</button>
+  </div>
+  <div class="tools right"><button id="fsBtn" title="Layar penuh (F)">Layar Penuh</button></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<div id="startScreen" class="overlay">
+  <div class="hero">
+    <h1>UKIN TEACHING TIMER &amp; SCRIPT</h1>
+    <ul class="ident">
+      <li>Mata Pelajaran: Informatika</li>
+      <li>Materi: Struktur Data Graph</li>
+      <li>Kelas: 9.8</li>
+      <li>Total Durasi: 80 Menit</li>
+    </ul>
+    <p class="sum">18 langkah: Pendahuluan 10 menit, Kegiatan Inti 60 menit, Penutup 10 menit</p>
+    <div class="start-btns">
+      <button id="btnStart" class="go">MULAI</button>
+      <button id="btnStartFs" class="go ghost">LAYAR PENUH</button>
+    </div>
+    <p class="keys">Tekan Spasi untuk memulai. Setelah itu Spasi: jeda atau lanjutkan. Panah kanan: lewati. Panah kiri: sebelumnya. F: layar penuh.</p>
+  </div>
+</div>
+
+<div id="endScreen" class="overlay hidden">
+  <div class="hero">
+    <h1>PEMBELAJARAN SELESAI</h1>
+    <p class="sum">Seluruh tahapan pembelajaran telah dilalui: 18 langkah dalam 80 menit.</p>
+    <button id="btnRestart" class="go">MULAI ULANG</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
