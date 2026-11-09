@@ -226,14 +226,18 @@ const STEPS = [
  {
   "id": "1.6",
   "phase": "Pendahuluan",
-  "title": "Apersepsi Tree dan Peta Buleleng",
+  "title": "Apersepsi Tree",
   "seconds": 60,
   "rpm": {
    "guru": "Guru membuka pelajaran dengan salam dan meminta seorang murid memimpin doa. Guru mengecek kehadiran dan kesiapan perlengkapan belajar. Guru menanyakan kabar murid. Guru mengajak ice breaking singkat jika perlu. Guru memberi asesmen diagnostik kognitif untuk menilai pemahaman awal tentang graph. Guru mengaitkan materi Tree dengan hubungan antarlokasi pada peta Buleleng. Guru mengajukan pertanyaan pemantik: “Bagaimana kalian menggambarkan hubungan antara Pantai Lovina, Air Terjun Gitgit, Pura Beji, Danau Buyan, dan Kota Singaraja supaya mudah dipahami?” Guru menyampaikan tujuan pembelajaran.",
    "siswa": "Murid menjawab salam dan berdoa bersama. Murid menjawab presensi dan menyiapkan perlengkapan belajar. Murid menyampaikan kabar mereka. Murid mengikuti ice breaking jika ada. Murid mengerjakan asesmen diagnostik sendiri. Murid mengingat materi Tree dan menghubungkannya dengan pengalaman sehari-hari. Murid membaca pertanyaan pemantik dan menyampaikan dugaan awal. Murid menyimak tujuan pembelajaran."
   },
-  "ref": "1.6 Apersepsi: mengaitkan Tree dengan peta Buleleng",
+  "ref": "1.6 Apersepsi: mengingat kembali Tree",
   "items": [
+   {
+    "type": "aksi",
+    "text": "Guru menampilkan contoh Tree, yaitu struktur organisasi sekolah, di layar."
+   },
    {
     "type": "guru",
     "who": "GURU",
@@ -262,8 +266,7 @@ const STEPS = [
     "type": "guru",
     "who": "GURU",
     "detail": "Bapak",
-    "text": "Bagus sekali, itu ciri penting dari Tree. Sekarang bayangkan peta Buleleng. Ada Kota Singaraja, Pantai Lovina, Air Terjun Gitgit, dan Danau Buyan, dan semuanya dihubungkan oleh jalan. Apakah hubungan antartempat seperti ini sama dengan Tree? Simpan dulu pertanyaan itu di kepala kalian.",
-    "note": "Tampilkan peta Buleleng di layar."
+    "text": "Bagus sekali, itu ciri penting dari Tree."
    }
   ]
  },
@@ -286,7 +289,7 @@ const STEPS = [
     "type": "guru",
     "who": "GURU",
     "detail": "Bapak",
-    "text": "Bapak punya pertanyaan pemantik untuk kalian: Sekarang bayangkan hubungan antarlokasi di Kabupaten Buleleng. Bagaimana cara menggambarkan hubungan antara beberapa lokasi yang terhubung? Pikirkan sebentar, lalu sampaikan dugaan awal kalian."
+    "text": "Bapak punya pertanyaan pemantik untuk kalian: Struktur organisasi sekolah menggambarkan hubungan yang bertingkat dari atas ke bawah. Namun, bagaimana jika kalian diminta menggambarkan hubungan antarlokasi yang saling terhubung? Pikirkan sebentar, lalu sampaikan dugaan awal kalian."
    },
    {
     "type": "siswa",
@@ -298,7 +301,7 @@ const STEPS = [
     "type": "siswa",
     "who": "[ADELA]",
     "detail": "Ketua Kel. 5",
-    "text": "Menurut saya, bisa digambar di peta, lalu lokasi yang berdekatan dihubungkan dengan garis."
+    "text": "Menurut saya, bisa digambar bertingkat seperti Tree, Pak, satu lokasi di atas dan lokasi lainnya di bawahnya."
    },
    {
     "type": "guru",
