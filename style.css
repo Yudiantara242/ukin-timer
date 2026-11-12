@@ -24,6 +24,12 @@ h1{font-size:1.35rem;letter-spacing:.04em;color:var(--cyan)}
 .overall{flex:0 1 24rem;min-width:13rem}
 .overall-text{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:1rem;margin-bottom:.35rem;color:var(--muted)}
 .overall-text b{color:var(--text);font-size:1.3rem}
+.top-right{display:flex;align-items:center;gap:1.8rem}
+.total-clock{display:flex;flex-direction:column;align-items:flex-end;line-height:1.05;padding-right:1.8rem;border-right:1px solid var(--line)}
+.total-clock span{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.total-clock b{font-size:2.2rem;font-weight:800;font-variant-numeric:tabular-nums;min-width:5ch;text-align:right;color:var(--cyan)}
+.total-clock[data-level=warn] b{color:var(--warn)}
+.total-clock[data-level=danger] b{color:var(--danger)}
 .bar{height:.6rem;background:#0b1f4d;border-radius:99px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:inherit}
 .bar.big{height:1rem;margin:.6rem 0 0}
@@ -153,6 +159,7 @@ body[data-mode=script] .prep{inset:.4rem 1.4rem .4rem 42%}
   .layout{display:flex;flex-direction:column}
   .script-body{max-height:70vh}
   .top{flex-direction:column;align-items:flex-start}
+  .top-right{width:100%;justify-content:space-between}
   .controls{grid-template-columns:1fr}
   .playback{flex-wrap:wrap;justify-content:center}
   .timer{grid-template-columns:1fr;grid-template-areas:"id" "clock" "bar" "meta";text-align:center}

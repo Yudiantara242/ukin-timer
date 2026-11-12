@@ -345,7 +345,7 @@ const STEPS = [
     "id": "2.1",
     "phase": "Kegiatan Inti",
     "title": "Stimulation / Pemberian Rangsangan",
-    "seconds": 420,
+    "seconds": 240,
     "rpm": {
       "guru": "Guru menampilkan peta atau gambar lokasi di Buleleng: Kota Singaraja, Pantai Lovina, Air Terjun Gitgit, dan Danau Buyan. Guru bertanya cara menggambarkan hubungan antarlokasi. Guru mengaitkan stimulus dengan materi Tree dan menahan penjelasan konsep Graph.",
       "siswa": "Murid mengamati peta atau gambar yang guru tampilkan. Murid menyampaikan pendapat dari pengalaman mereka mengenal lokasi di Buleleng. Murid menduga cara menggambarkan hubungan antarlokasi."
@@ -479,7 +479,7 @@ const STEPS = [
     "id": "2.3",
     "phase": "Kegiatan Inti",
     "title": "Data Collection / Pengumpulan Data",
-    "seconds": 780,
+    "seconds": 900,
     "rpm": {
       "guru": "Guru membagikan media interaktif kepada murid sebagai sumber belajar. Guru mengarahkan murid mengamati diagram dan mengeksplorasi media interaktif. Guru memberi contoh visual dan pertanyaan pengarah kepada murid yang perlu bantuan. Guru memantau diskusi dan mendorong semua anggota kelompok ikut berpartisipasi.",
       "siswa": "Murid mengamati diagram dan mengeksplorasi media sesuai petunjuk LKM. Murid mengidentifikasi vertex (simpul) dan edge (sisi). Murid menghitung vertex dan edge, lalu menelusuri jalur antarlokasi. Murid mencatat hasil pengamatan di LKM."
@@ -591,7 +591,7 @@ const STEPS = [
     "id": "2.4",
     "phase": "Kegiatan Inti",
     "title": "Data Processing / Pengolahan Data",
-    "seconds": 780,
+    "seconds": 840,
     "rpm": {
       "guru": "Guru membimbing murid mengolah hasil pengamatan lewat pertanyaan pengarah. Guru membantu murid yang kesulitan menghitung simpul dan sisi serta menentukan jalur. Guru memberi tantangan lanjutan: membandingkan beberapa jalur atau menganalisis perbedaan Graph dan Tree. Guru memberi umpan balik dan menahan penyelesaian tugas murid.",
       "siswa": "Murid menyelesaikan tugas di LKM dari hasil pengamatan. Murid menghitung vertex dan edge serta menentukan jalur antarlokasi. Murid yang sudah siap mengerjakan tantangan lanjutan: membandingkan jalur atau karakteristik Graph dan Tree. Murid mendiskusikan hasil analisis dan menulis alasannya."
@@ -1150,6 +1150,9 @@ const STEPS = [
     var before = 0;
     for (var i = 0; i < st.idx; i++) before += STEPS[i].seconds * 1000;
     var el = st.finished ? TOTAL * 1000 : before + dur - rem;
+    var totalLeft = Math.max(0, TOTAL * 1000 - el);   // hitung mundur total 80 menit
+    $('totalLeft').textContent = fmt(totalLeft);
+    $('totalClock').dataset.level = totalLeft <= 300000 ? 'danger' : totalLeft <= 600000 ? 'warn' : 'ok';
     $('overallPct').textContent = Math.min(100, Math.floor(100 * el / (TOTAL * 1000))) + '%';
     $('overallBar').style.width = (100 * el / (TOTAL * 1000)) + '%';
     $('overallSteps').textContent = st.done.size + ' / ' + STEPS.length + ' langkah selesai';
